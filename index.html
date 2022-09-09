@@ -13,6 +13,7 @@
             padding: 10px;
             font-family: arial;
             }
+            /* navigation menu */
             nav {
                 background:lightgoldenrodyellow;
                 margin: 0 auto;
@@ -25,23 +26,63 @@
                 color: pink;
                 flex: 1;
                 margin: 0;
-             }
-             main {
-                display: inline-block;
                 }
+                #nav-ul {
+       list-style-image: none;
+   }
+   .nav-li {
+       display: inline-block;
+       padding:0 10px;
+   }
+   a {
+       text-decoration: none;
+       color: rgb(189, 61, 61);
+   }
+    /* main container area beneath menu */
+   main {
+       background-color:lightblue ;
+       display: flex;
+   }
+   .sidebar {
+       margin-right: 25px;
+       padding: 10px;
+   }
+   .sidebar-img {
+       width: 200px;
+   }
+   .content {
+       flex: 1;
+       padding: 15px;
+   }
+   #interests {
+       border: 4px silver ridge;
+       padding: 8px;
+   }
+   h2, h3 {
+       margin: 0px;
+   }   
         </style>
     </head>
     
     <body>
+        <!-- All content goes here -->
+        <div>
+            <div id="all-contents"></div>{
+                max-width: 800px;
+                margin: auto;
+            }
+        </div>
         <div> 
             <nav>
                 <h1>Kalilah's Great Website</h1>
             </nav>
     
             <main>
+        <!-- Sidebar section -->
                 <div>
                     <img src="https://pbs.twimg.com/media/EwIbWkrXAAARrQ2.jpg">
                 </div>
+        <!-- Content section -->
                 <div>
                    <h2>Kalilah Lewis</h2> 
                    <p>Student at NOMMA</p>
