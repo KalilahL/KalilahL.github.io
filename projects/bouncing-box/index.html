@@ -61,8 +61,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			var positionX = 0; 
-
+			var positionX = 0;
+			var points = 0; 
+			var speed = 10
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,9 +72,14 @@
 			*/
 			function update() {
 				//*your code to increase positionX by 10
-				positionX = positionX + 10
-			moveBoxTo(positionX)				
-
+				positionX = positionX + speed
+			moveBoxTo(positionX)
+			if(positionX >= 1465){
+				speed = -speed;
+			}			
+			else if(positionX <= 0){
+				speed = -speed;
+			}
 			};
 
 			/* 
@@ -83,7 +89,9 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
-				changeBoxText(1);
+				points = points + 1
+				speed = speed + 3
+				changeBoxText(points);
 
 			};
 		})();
