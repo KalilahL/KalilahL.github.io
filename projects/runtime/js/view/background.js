@@ -8,7 +8,6 @@ var background = function (window) {
     /*
      * Create a background view for our game application
      */
-
     window.opspark.makeBackground = function (app, ground) {
         /* Error Checking - DO NOT DELETE */
         if (!app) {
@@ -27,8 +26,8 @@ var background = function (window) {
         var background;
 
         // ANIMATION VARIABLES HERE:
-        var tree
-        var buildings = []
+        var tree;
+        var buildings = [];
 
         // called at the start of game and whenever the page is resized
         // add objects for display in background. draws each image added to the background once
@@ -38,37 +37,38 @@ var background = function (window) {
             // TODO: 2 - Part 2
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth, canvasHeight, '#8a2be2');
+            var backgroundFill = draw.rect(canvasWidth, canvasHeight = groundY, 'black');
             background.addChild(backgroundFill);
-
             // TODO: 3 - Add a moon and starfield
             var moon = draw.bitmap("img/moon.png");
-            moon.x = 900
-            moon.y = 10;
-            moon.scaleX = .8;
-            moon.scaleY = .8;
+            moon.x = 1250;
+            moon.y = 5;
+            moon.scaleX = .6;
+            moon.scaleY = .6;
             background.addChild(moon);
 
-            for (var i = 0; i < 100; i++) {
+            for (var i = 0; i < 150; i++) {
                 var circle = draw.circle(10, "white", "LightGray", 2);
                 circle.x = canvasWidth * Math.random();
                 circle.y = groundY * Math.random();
                 background.addChild(circle);
             }
+
             // TODO 5: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            for (var i = 0; i < 6; ++i) {
+            for (var i = 0; i < 5; i++) {
                 var buildingHeight = 300;
-                var building = draw.rect(75, buildingHeight, "LightGray", "Black", 1);
+                var building = draw.rect(75, buildingHeight, "grey", "grey", 5);
                 building.x = 200 * i;
                 building.y = groundY - buildingHeight;
                 background.addChild(building);
                 buildings.push(building);
             }
 
+
             // TODO 4: Part 1 - Add a tree
             tree = draw.bitmap("img/tree.png");
-            tree.x = 0;
-            tree.y = 110;
+            tree.x = 100;
+            tree.y = 100;
             background.addChild(tree);
 
 
@@ -89,9 +89,14 @@ var background = function (window) {
             if (tree.x < -200) {
                 tree.x = canvasWidth;
             }
-
             // TODO 5: Part 2 - Parallax
-            
+            for (var i = 0; i < buildings.length; i++) {
+                var eachElement = buildings[i];
+                eachElement.x = eachElement.x - 1.7;
+                if (eachElement.x < -200) {
+                    eachElement.x = canvasWidth;
+                }
+            }
 
         } // end of update function - DO NOT DELETE
 
