@@ -55,7 +55,7 @@ var background = function (window) {
             }
 
             // TODO 5: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 9; i++) {
                 var buildingHeight = 300;
                 var building = draw.rect(75, buildingHeight, "grey", "grey", 5);
                 building.x = 200 * i;
@@ -84,7 +84,7 @@ var background = function (window) {
             var groundY = ground.y;
 
             // TODO 4: Part 2 - Move the tree!
-            tree.x = tree.x - 1;
+            tree.x = tree.x - 5;
 
             if (tree.x < -200) {
                 tree.x = canvasWidth;
