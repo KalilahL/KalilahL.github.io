@@ -46,28 +46,30 @@ $(document).ready(function () {
     dataShapes.push(shape)
 
   // TODO 2: add a new property to all data shapes
-  for(var i = 0; i <= dataShapes.length;i++){
+  for(var i = 0; i < dataShapes.length;i++){
     var currentShape
-    currentShape[dataShapes[i]]
-     if(currentShape === blue){
-      shape.goodBehavior = "blink"
+    currentShape = dataShapes[i]
+     if(currentShape.color === "blue"){
+      currentShape.goodBehavior = "blink"
      }
-     else if(currentShape === red){
-      shape.goodBehavior = "bounce"
+     else if(currentShape.color === "red"){
+      currentShape.goodBehavior = "bounce"
      }
-     else(currentshape){
-      shape.goodBehavior = "spin"
-     }
+     else(currentShape.goodBehavior = "spin");
+     
   }
 
   // TODO 3-a: add a function that handles the static display type
     function handleStatic(data){
-      handleStatic(data);
+      setBackgroundWithObject(data);
       animationDetails.displayType = 1
     }
 
   // TODO 4-a: add a function that handles the good display type
-  
+    handleGood(color, shape, repeat);{
+      setBackgroundWithSimple(color, shape, repeat)
+      animationDetails.displayType = 2
+    }
 
   // TODO 5-a: add a function that handles the bad display type
   
@@ -78,12 +80,13 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handleStatic();
+    handleStatic(dataShapes[currentIndex]);
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-    
+    var currentShape 
+    handleGood(currentShape.color,currentShape.shape,currentShape.repeat)
   }
 
   function badDisplay() {
