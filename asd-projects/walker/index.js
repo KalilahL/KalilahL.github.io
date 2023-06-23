@@ -17,7 +17,7 @@ function runProgram() {
     "DOWN": 40,
     "RIGHT": 39,
   }
-  
+
   var positionX = 0
   var speedX = 0
   var positionY = 0
@@ -55,56 +55,41 @@ function runProgram() {
     }
     else if (event.which === KEY.UP) {
       console.log("up pressed")
-      speedY = 5
+      speedY = -5
     }
     else if (event.which === KEY.RIGHT) {
       console.log("right pressed")
       speedX = 5
     }
-    else if (event.which === KEY.DOWN){
+    else if (event.which === KEY.DOWN) {
       console.log("down pressed")
-      speedY = -5
+      speedY = 5
     }
 
-    function handeKeyUp(event){
-      if (event.which === KEY.LEFT) {
-        console.log("left pressed")
-        speedX = 0
-      }
-      else if (event.which === KEY.UP) {
-        console.log("up pressed")
-        speedY = 0
-      }
-      else if (event.which === KEY.RIGHT) {
-        console.log("right pressed")
-        speedX = 0
-      }
-      else if (event.which === KEY.DOWN){
-        console.log("down pressed")
-        speedY = 0
+    function handeKeyUp(event) {
+      
     }
   }
 }
-  ////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 
-  function endGame() {
-    // stop the interval timer
-    clearInterval(interval);
+function endGame() {
+  // stop the interval timer
+  clearInterval(interval);
 
-    // turn off event handlers
-    $(document).off();
-  }
-
-function repositionGameItem(){
-positionX += speedX
-positionY += speedY
+  // turn off event handlers
+  $(document).off();
 }
 
-function redrawGameItem(){
+function repositionGameItem() {
+  positionX += speedX
+  positionY += speedY
+}
+
+function redrawGameItem() {
   $("#walker").css("left", positionX)
   $("#walker").css("top", positionY)
-  }
 }
