@@ -54,7 +54,7 @@ function runProgram() {
     }
     else if (event.which === KEY.UP) {
       console.log("up pressed")
-      speedY = 5
+      speedY = -5
     }
     else if (event.which === KEY.RIGHT) {
       console.log("right pressed")
@@ -62,7 +62,7 @@ function runProgram() {
     }
     else if (event.which === KEY.DOWN) {
       console.log("down pressed")
-      speedY = -5
+      speedY = 5
     }
   }
     ////////////////////////////////
@@ -85,7 +85,7 @@ function runProgram() {
         speedY = 0
     }
     }
-}
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -107,4 +107,5 @@ function repositionGameItem() {
 function redrawGameItem() {
  $("#walker").css("left", positionX)
  $("#walker").css("top", positionY)
+}
 }
