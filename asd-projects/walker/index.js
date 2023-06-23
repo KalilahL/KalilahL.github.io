@@ -1,6 +1,6 @@
 /* global $, sessionStorage */
 
-const { speed } = require("jquery");
+
 $(document).ready(runProgram); // wait for the HTML / CSS elements of the page to fully load, then execute runProgram()
 
 function runProgram() {
@@ -65,7 +65,26 @@ function runProgram() {
       console.log("down pressed")
       speedY = -5
     }
+
+    function handeKeyUp(event){
+      if (event.which === KEY.LEFT) {
+        console.log("left pressed")
+        speedX = 0
+      }
+      else if (event.which === KEY.UP) {
+        console.log("up pressed")
+        speedY = 0
+      }
+      else if (event.which === KEY.RIGHT) {
+        console.log("right pressed")
+        speedX = 0
+      }
+      else if (event.which === KEY.DOWN){
+        console.log("down pressed")
+        speedY = 0
+    }
   }
+}
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
