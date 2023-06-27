@@ -85,7 +85,7 @@ Your first task is to create an `applyFilter` function. This is a big one, so we
 
 - **1a)** Make a function called name `applyFilter`, and for now, don't give it any parameters. Also leave the code block empty until **1c**.
 
-- **1b)** Call `applyFilter` in the `applyAndRender` function in the event handler section of your file. There is a comment that tells you where to put the function call.
+- **1b)** Call `applyFilter` inside of the `applyAndRender` function in the event handler section of your file. There is a comment that tells you where to put the function call.
 
 - **1c)** Inside of the code block of `applyFilter`, make nested loops to iterate over your `image` data. Recall that `image` is a 2D array, and be careful not to mix up the counting variables of each loop. Reference either Greenlight or your slides (or do a Google search) if you need a reminder on how to iterate over a 2D array.
 

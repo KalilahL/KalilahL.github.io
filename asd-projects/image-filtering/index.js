@@ -32,18 +32,18 @@ function applyAndRender() {
 /////////////////////////////////////////////////////////
 
 // TODO 1, 2 & 4: Create the applyFilter function here
-function applyFilter(){
-  for(var i = 0; i < image.length; i++){
-    for(var j = 0; j < image[i].length; j++){
+function applyFilter() {
+  for (var i = 0; i < image.length; i++) {
+    for (var j = 0; j < image[i].length; j++) {
       rgbString = image[i][j]
 
-      var rgbNumbers = rbgStringToArray(rgbString)
-      rgbString = rgbArrayToString(rgbNumbers)
+      var rgbNumbers = rgbStringToArray(rgbString)
       rgbNumbers[RED] = 225;
+      rgbString = rgbArrayToString(rgbNumbers)
       image[i][j] = rgbString
-      
+
     }
-    }
+  }
 }
 
 // TODO 7: Create the applyFilterNoBackground function
