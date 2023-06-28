@@ -80,9 +80,9 @@ function reddify(reddy) {
 
 // TODO 6: Create more filter functions
 function decreaseBlue(arr) {
-  arr[BLUE] = keepInBounds(arr[1] - 50)
+  arr[BLUE] = keepInBounds(arr[BLUE] - 50)
 }
 function increaseGreenByBlue(arr2) {
-  arr2[2] = keepInBounds(arr2[2] + arr2[1])
+  arr2[GREEN] = keepInBounds(arr2[GREEN] + arr2[BLUE])
 }
 // CHALLENGE code goes below here
