@@ -18,7 +18,7 @@ The CSS ids you will work with are:
         for(var i = 0; i <= array2.length - 1; i++){
             for(var j = array2.length - 1; j >= i + 1; j--){
                 if (array2[j].value < array2[j - 1].value){
-                   swap(array2 , i, j)
+                   swap(array2 , j, j- 1)
                     updateCounter(bubbleCounter);
                     await sleep();
                 }
